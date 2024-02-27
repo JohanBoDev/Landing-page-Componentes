@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+*{
+    font-family:"Share Tech", sans-serif ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--primary-color);
+}
+
+:root{
+    --primary-color: #0D1117;
+    --secondary-color: #e4e9f0;
+    --tertiary-color: #465b7b;
+    --quaternary-color: #738bb0;
+}
+
+
+/*barra nav*/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #2b3b548a;
+    backdrop-filter: blur(10px);
+    color: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    img{
+        width: 35px;
+    };
+
+    nav{
+        ul{
+            display: flex;
+        } 
+    }
+    .nav-link{
+        margin-left: 40px;
+        list-style: none;
+        position: relative;
+        
+        
+        a{
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+    }
+    
+    .nav-link:after{
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        border-radius: 5px;
+        transform: scaleX(0);
+        background: white;
+        transition: all .6s ease;
+    }
+    
+    .nav-link:hover:after{
+        transform: scaleX(1);
+    }
+
+}
+
+/*sec nosotros*/
+
+
+.nosotros{
+    margin: 40px 100px;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--tertiary-color);
+
+    h2{
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+    }
+
+    iframe{
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 var(--tertiary-color);
+        margin-bottom: 60px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px; 
+        margin-bottom: 40px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .icon{
+        font-size: 4rem;
+        color: var(--tertiary-color);
+        margin-bottom: 10px;
+    }
+
+    .description{
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+        line-height: 1.5;
+    }
+}
+
+
+/*secc servicios*/
+
+.servicios{
+    margin: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--tertiary-color);
+
+
+    h2{
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+        text-align: center;
+    }
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 868px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    
+    }
+}
+
+@media (max-width: 680px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    text-align: center;
+    padding: 30px;
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
+
+    h3{
+        font-size: 1rem;
+        color: var(--secondary-color);
+    }
+    p{
+        font-size: .8rem;
+        color: var(--secondary-color);
+    }
+    img{
+        width: 5rem;
+    }
+
+    button{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--quaternary-color);
+        color: var(--secondary-color);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    button:hover{
+        background-color: var(--primary-color);
+    }
+
+    span{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 5px;
+        border-radius: 50%;
+    }
+}
+
+.card:hover{
+    box-shadow: 0 0 10px 0 var(--tertiary-color);
+}
+
+
+/*secc contacto*/
+
+.contacto{
+    margin: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .titulo-cont{
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+}
+
+.contact-dividido{
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.contacto-img{
+    width: 50%;
+    img{
+        width: 100%;
+    }
+}
+
+.contacto-texto{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+
+    h2{
+        font-size: 2.5rem;
+        text-align: center;
+        color: var(--secondary-color);
+    }
+
+    p{
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--quaternary-color);
+            color: var(--secondary-color);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            a{
+                text-decoration: none;
+                color: var(--secondary-color);
+            }
+        }
+
+    }
+
+    .formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #2b3b548a;
+        backdrop-filter: blur(5px);
+        color: var(--secondary-color);
+        padding: 10px;
+
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        textarea{
+            resize: none;
+            margin: 10px 0;
+        }
+    }
+
+    .background{
+        width: 100%;
+        background-image: url(img/undraw_fill_form_re_cwyf.svg);
+        background-size: cover;
+    }
+
+    form{
+        width: 80%;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        button{
+            background-color: #2b3b548a;
+            backdrop-filter: blur(5px);
+            display: grid;
+            justify-content: center;
+            grid-column: 1/-1;
+            border: none;
+            padding: 10px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        button:hover{
+            background-color: #ffffffd3;
+            backdrop-filter: blur(5px);
+            color: var(--primary-color);
+        }
+    label{
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+    }
+    input{
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #2b3b548a;
+        backdrop-filter: blur(5px);
+        color: var(--secondary-color);
+
+        
+    }
+
+    input:focus{
+        outline: none;
+        background-color: #2b3b548a;
+        backdrop-filter: blur(5px);
+    }
+
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+}
+
+/*media query - nosotros*/
+@media screen and (max-width: 880px) {
+    .nosotros{
+        margin: 40px 30px;
+    }  
+    
+}
+
+@media screen and (max-width: 680px) {
+    .info{
+        margin: 50px 30px;
+    }
+    iframe{
+        width: 100%;
+    }
+    .icon{
+        font-size: 3rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .nosotros{
+        margin: 60px 15px;
+    }  
+    .info{
+        margin: 20px 15px;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .icon{
+        font-size: 2rem;
+    }
+    .description{
+        font-size: .8rem;
+    }
+}
+
+/*media query -  servicios*/
+
+@media screen and (max-width: 880px) {
+    .servicios{
+        margin: 40px 30px;
+    }  
+}
+
+@media screen and (max-width: 680px) {
+    .card{
+        padding: 20px;
+        h3{
+            font-size: 1.2rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        button{
+            padding: 10px 15px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .servicios{
+        margin: 40px 15px;
+
+        h2{
+            font-size: 2rem;}
+    }  
+    .card{
+        padding: 15px;
+        h3{
+            font-size: 1rem;
+        }
+        p{
+            font-size: .8rem;
+        }
+        button{
+            padding: 10px 15px;
+            font-size: .8rem;
+        }
+    }
+}
+
+/*media query -  contacto*/
+  @media screen and (max-width: 880px) {
+    .contact-dividido{
+        flex-direction: column;
+    }
+    .contacto-img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .contacto-texto{
+        width: 100%;
+    }
+
+  }
+
+    @media screen and (max-width: 680px) {
+
+        .contacto{
+            margin: 30px 30px;
+        }
+    .formulario{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+  }
+
+  @media screen and (max-width: 480px){
+
+
+    .contacto{
+        margin: 20px 15px;
+    }
+    .contacto-texto{
+        h2{
+            font-size: 1rem;
+        }
+        p{
+            font-size: .8rem;
+        }
+    
+    }
+
+    .formulario{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        font-size: .8rem;
+    }
+    
+  }
+
+/*footer*/
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #2b3b548a;
+    backdrop-filter: blur(10px);
+    color: var(--secondary-color);
+    width: 100%;
+
+
+    img{
+        width: 35px;
+    };
+
+    
+        a{
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+}
+
+.derechos-de-autor{
+    font-size: .8rem;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+}
